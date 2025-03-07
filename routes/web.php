@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +25,7 @@ Route::middleware(['auth'])->group(function () {
     })->name('home');
 
     Route::resource('user', UserController::class);
+    Route::resource('product', \App\Http\Controllers\ProductController::class);
 
 
 });
